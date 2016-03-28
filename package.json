@@ -1,7 +1,7 @@
 {
   "name": "demo1",
   "version": "0.1.0",
-  "description": "A Vue.js project",
+  "description": "vue-todomvc",
   "author": "cherishhsieh <xieqin1991@gmail.com>",
   "private": true,
   "scripts": {
