@@ -1,11 +1,5 @@
 export default {
-  all (list) {
-    return list
-  },
-  active (list) {
-    return list.filter(item => !item.state)
-  },
-  completed (list) {
-    return list.filter(item => item.state)
-  }
+  all: list => list,
+  active: list => list.filter(item => !item.state),
+  completed: list => list.filter(item => item.state)
 }
