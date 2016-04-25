@@ -1,6 +1,6 @@
 <template>
-  <ul class="list" v-for="item in listdata" track-by="$index">
-    <li :class="{'complete': item.state}">
+  <ul class="list">
+    <li v-for="item in listdata" track-by="$index" :class="{'complete': item.state}">
       <input type="checkbox" v-model="item.state">
       {{ $index + 1 }}  {{ item.value }}
       <i class="delete" @click="deleteTodo($index)">x</i>
@@ -74,10 +74,14 @@ export default {
       color: #fff;
     }
   }
+  .list li:hover i.delete{
+    display: block;
+  }
   .delete {
+    display: none;
     position: absolute;
     right: 0;
-    display: inline-block;
+    // display: inline-block;
     width: 25px;
     height: 25px;
     cursor: pointer;
